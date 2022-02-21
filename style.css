@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(229, 23%, 23%);
+}
+
+body {
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: max(25em, 60vw);
+    background-position: -15vw -30vw, bottom -30vw right -15vw;
+
+    background-color: hsl(185, 75%, 39%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container */
+
+.container {
+    background-image: url(images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+
+    width: 80vw;
+    max-width: 400px;
+
+    height: 400px;
+    max-height: 80vw;
+
+    border-radius: 20px;
+    padding: 10px 0 10px 0;
+
+    display: grid;
+    grid-template-areas: 
+    ". . ."
+    ". . ."
+    "perfil perfil perfil"
+    "dados dados dados";
+}
+
+/* Tamplete do perfil */
+
+.perfil {
+    display: grid;
+    grid-template-areas: 
+    "foto foto"
+    "name idade"
+    "local local";
+    grid-template-rows: 1fr 0.2fr 0.2fr;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    grid-area: perfil;
+}
+
+.foto {
+    border-radius: 50%;
+    border: 5px solid white;
+    grid-area: foto;
+}
+
+.name {
+    font-size: 1.2em;
+    font-weight: 700;
+    grid-area: name;
+}
+
+.idade {
+    color: hsl(227, 10%, 46%);
+    grid-area: idade;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+.local {
+    grid-area: local;
+    color: hsl(227, 10%, 46%);
+    font-size: 1em;
+}
+
+/* Tamplete dos dados */
+
+.dados {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+    grid-area: dados;
+    border-top: 1px solid hsla(227, 10%, 46%, 0.342);
+    margin-top: 20px;
+}
+
+.list {
+    text-align: center;
+}
+
+.top {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.bt {
+    font-size: 0.8em;
+    color: hsl(227, 10%, 46%);
+}
+
+
+/* Attribution */
+
+.attribution {
+    margin-top: 20px;
+    color: white;
+}
